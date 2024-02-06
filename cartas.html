@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Animación de Texto</title>
+    <style>
+       
+       body {
+            margin: 0;
+            padding: 0;
+            overflow: scroll;
+        }
+        .container {
+            position: 30px;
+            text-align: 30px;
+        }
+
+        img {
+            width: 100%;
+            height: auto;
+            position: center;
+            top: 0;
+            left: 0;
+            z-index: -1;
+        }
+
+       .texto-container {
+            position: center;
+            top: 80%;
+            left: 80%;
+            transform: translate(-50%, -20%);
+        
+        
+            border-radius: 10px;
+            max-width:0%; /* Establece el ancho máximo para el contenedor del texto */
+            
+        }
+
+        #texto {
+            font-size: 350%;
+            color: #1d0101;
+            padding: center;
+            margin-left: 150px;
+            margin-right: 100px;
+            margin-top: 150px;
+        }
+
+        .bottom-image img {
+      width: 200px; /* Ancho de la imagen */
+      height: auto; /* Altura automática para mantener la proporción */
+      margin-top: 500px;
+      margin-left: 500px;
+    } 
+    </style>
+</head>
+<body>
+    
+
+
+
+    <div class="container">
+       
+        <div class="texto-animado">
+            <p id="texto"></p>
+        </div>
+        	
+
+    </div>
+    <div class="bottom-image">
+        <a href="index.html">
+          <img src="imagen1.jpg" alt="Boton de enlace">
+        </a>
+      </div>
+   
+    <script>
+        const texto = document.getElementById("texto");
+        const mensaje = "Actos de amor es un sitio web que a través de tres historias testimoniales de mujeres ayuda a desmitificar el amor romántico con enfoque en la violencia de género en vínculos de parejas heterosexuales. El proyecto presenta una narrativa hipertextual, lo que le permite al usuario generar una historia a través de pedazos de texto, notas de voz, collage, y fotografías. El ordenamiento del material multimedia requiere de interacción y resulta parcialmente aleatorio, posibilitando la “creación” de una narrativa individual.";
+        let index = 0;
+
+        function mostrarTexto() {
+            if (index < mensaje.length) {
+                texto.innerHTML += mensaje.charAt(index);
+                index++;
+                setTimeout(mostrarTexto, 80); // Ajusta el tiempo de espera entre letras
+            }
+        }
+
+        mostrarTexto();
+    </script>
+</body>
+</html>
