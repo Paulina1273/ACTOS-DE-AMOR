@@ -8,6 +8,7 @@
       color: white;
       font-family: Arial, sans-serif;
       padding: 10px;
+      margin: 2%;
     }
 
     .image-container {
@@ -80,19 +81,19 @@
 
   <div class="image-container">
     <div class="image-row">
-      <img src="imagen1.jpg" onclick="showRandomMedia()" alt="Imagen 1">
+      <img src="imagen1.png" onclick="showRandomMedia()" alt="Imagen 1">
       <img src="imagen2.png" onclick="showRandomMedia()" alt="Imagen 2">
       <img src="imagen3.png" onclick="showRandomMedia()" alt="Imagen 3">
     </div>
     <div class="image-row">
       <img src="imagen4.png" onclick="showRandomMedia()" alt="Imagen 4">
       <img src="imagen5.png" onclick="showRandomMedia()" alt="Imagen 5">
-      <img src="imagen5.png" onclick="showRandomMedia()" alt="Imagen 6">
+      <img src="imagen6.png" onclick="showRandomMedia()" alt="Imagen 6">
     </div>
     <div class="image-row">
-      <img src="imagen1.jpg" onclick="showRandomMedia()" alt="Imagen 7">
-      <img src="imagen1.jpg" onclick="showRandomMedia()" alt="Imagen 8">
-      <img src="imagen1.jpg" onclick="showRandomMedia()" alt="Imagen 9">
+      <img src="imagen7.PNG" onclick="showRandomMedia()" alt="Imagen 7">
+      <img src="imagen8.PNG" onclick="showRandomMedia()" alt="Imagen 8">
+      <img src="imagen9.png" onclick="showRandomMedia()" alt="Imagen 9">
       
     </div>
   </div>
@@ -161,6 +162,10 @@
       const audioPlayer = document.getElementById("audio-player");
       const audioContainer = document.getElementById("audio-container");
 
+
+
+
+      
       if (randomMedia.type === "image") {
         // Mostrar la imagen
         displayImage.style.display = "block";
